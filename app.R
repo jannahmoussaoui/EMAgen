@@ -46,14 +46,14 @@ library(openxlsx)
 custom_theme <- bs_theme(
   bg = "#FAF4EE",
   fg = "#000000",
-  primary = "#B67754", 
+  primary = "#002676", 
   secondary = "#ffffff" 
 )
 
 # Define a custom CSS
 custom_css <- "
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Jaldie', sans-serif;
   background-image: url('background.svg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@ body {
 }
 
 .card {
-  background-color: #B67754 !important;
+  background-color: #002676 !important;
   font-size: 15px; /* Optional: Adjust font size */
   color: #ffffff !important; /* Set text color inside cards */
 }
@@ -87,7 +87,7 @@ body {
 .card-inner {
   background-color: #FAF4EE !important;
   font-size: 15px; /* Optional: Adjust font size */
-  color: #B67754 !important; /* Set text color inside these specific cards */
+  color: #002676 !important; /* Set text color inside these specific cards */
 }
 
 .btn-container {
@@ -97,7 +97,7 @@ body {
 }
 
 .btn-container button {
-    background: #B67754; /* Set the background for buttons */
+    background: #002676; /* Set the background for buttons */
     color: #FAF4EE; /* Text color for buttons */
     border: none; /* Remove border if you want */
     padding: 10px 15px; /* Add padding for better appearance */
@@ -109,7 +109,7 @@ body {
 }
 
 .btn {
-    background: #B67754 !important; /* Set the background for buttons */
+    background: #002676 !important; /* Set the background for buttons */
     color: #FAF4EE !important; /* Text color for buttons */
     border: none !important; /* Remove border if you want */
     padding: 10px 15px; /* Add padding for better appearance */
@@ -123,7 +123,7 @@ body {
 
 /* Override Shiny's default notification styles */
 .shiny-notification {
-  background-color: #B67754 !important; /* Dark purple background */
+  background-color: #002676 !important; /* Dark purple background */
   color: #ffffff !important; /* White text */
   border: none !important; /* No border */
   font-family: 'Raleway', sans-serif; /* Match font family */
@@ -161,7 +161,7 @@ ui <- fluidPage(
                        up and the last survey will come within 1 hour of going to bed. When no school end time is specified, the remaining three surveys
                        will come at semi-random times between the first and last surveys, but never within an hour of one another. When a school-end time is specified,
                        the surveys will come at random times between the end of school and the last survey. Parameters can be adjusted according to study protocols."),
-                     h4(strong("Reference")),
+                     h4(strong("Cite as")),
                      p("Moussaoui, J.R. & D’Adamo, L. (2024). EMAgen. https://jannahmoussaoui.shinyapps.io/EMAgen/"),
                      p("All code is openly available on GitHub: https://github.com/jannahmoussaoui/EMAgen")
                  )
@@ -182,7 +182,7 @@ ui <- fluidPage(
                                                             textInput("MOMENT_REPS", "Number of Surveys", value = "5")))),
                    column(6, card(class = "card-inner", div(class = "card-inner", 
                                                             h4(strong("Participant Information")),
-                                                            textInput("ID", "Avicenna ID", value = "123"),
+                                                            textInput("ID", "Participant ID", value = "123"),
                                                             dateInput("ema_start_date", "EMA Start Date", value = as.Date("2024-01-01")),
                                                             textInput("weekday_wake", "Weekday Wake-up Time", value = "07:00:00 AM"),
                                                             textInput("weekday_sleep", "Weekday Sleep Time", value = "11:30:00 PM"),

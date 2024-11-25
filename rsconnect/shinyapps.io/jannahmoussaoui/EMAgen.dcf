@@ -5,7 +5,7 @@ account: jannahmoussaoui
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 13281088
-bundleId: 9336130
+bundleId: 9386378
 url: https://jannahmoussaoui.shinyapps.io/EMAgen/
 version: 1
 asMultiple: FALSE
